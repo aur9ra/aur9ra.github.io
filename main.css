@@ -1,0 +1,127 @@
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+
+@font-face {
+    font-family: Coiny; 
+    src: url(coiny-regular.ttf);
+  }
+
+@font-face {
+    font-family: Ubuntu; 
+    src: url(ubuntu.ttf);
+  }
+
+body{
+    background-image: linear-gradient(45deg, rgb(58, 58, 58), rgb(158, 158, 158));
+    background-size: 70px 70px;
+    animation: bgcycle 2s infinite linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+@keyframes bgcycle{
+    0% {
+        background-position: 0px 0px;
+    }
+    100% {
+        background-position: 70px 70px;
+    }
+}
+
+.pagewrapper {
+    width: 6in;
+    height: 9in;
+    padding: 0;
+    padding-bottom: 0.5in;
+    display:block;
+    margin-left:0.1in;
+    margin-right:0.1in;
+}
+
+.page{
+    padding:0.01in;
+    display: block;
+    height:9in;
+    overflow: hidden;
+}
+
+.half{
+    width: 50%;
+}
+
+.halfbox{
+    display:flex;
+}
+
+.full{
+    width:auto;
+}
+
+.content{
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.4), rgba(255,255,255,0.6));
+    border-radius: 0.1in;
+    padding: 0.1in;
+    margin: 0.1in;
+    margin-bottom:0.2in;
+    color:rgb(58, 58, 58);
+    box-shadow: 0 0 0.05in 3px rgba(58,58,58,0.4);
+    overflow: hidden;
+    font-size: 14pt;
+    
+}
+
+h1{
+    font-family: Coiny;
+    text-align: center;
+    margin:0.0in;
+    font-size:24pt;
+}
+
+p{
+    margin:0.0in;
+    font-family: Ubuntu;
+}
+
+.contentborder{
+    border-color:rgb(58, 58, 58)
+}
+
+.dotted{
+    border-style: dotted;
+}
+
+img{
+    display:block;
+    box-shadow: 0 0 0.05in 3px rgba(58,58,58,0.4);
+    text-align: center;
+}
+
+.img_center{
+    margin:auto;
+}
+
+.img_right{
+    float:right
+}
+
+.pagenum_left{
+    font-size: 15pt;
+    position:absolute;
+    margin-left:0.2in;
+    margin-top:0.2in;
+    width:5.6in;
+    background-color: rgba(58,58,58,0.3);
+}
+
+.pagenum_right{
+    font-size: 15pt;
+    position:absolute;
+    margin-left:0.2in;
+    margin-top:0.2in;
+    width:5.6in;
+    background-color: rgba(58,58,58,0.3);
+}
