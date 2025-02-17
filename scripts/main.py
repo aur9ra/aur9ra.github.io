@@ -6,6 +6,7 @@ OUTPUT = "..\\docs"
 
 def md_to_html(input_path, output_path):
     for path, folders, files in os.walk(INPUT):
+        print(f"Found {files}")
         for file in files:
             if file.endswith(".md"):
                 input_file = os.path.join(path, file)
