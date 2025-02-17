@@ -22,4 +22,5 @@ def md_to_html(input_path, output_path):
                     print(f"Writing {output_file}")
                 
 if __name__ == "__main__":
+    print("Updating pages...")
     md_to_html(INPUT, OUTPUT)

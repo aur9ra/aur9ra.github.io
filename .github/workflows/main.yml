@@ -31,6 +31,7 @@ jobs:
              git config --global user.name "github-actions"
              git config --global user.email "github-actions@github.com"
              git add docs
+             git add -A
              git commit -m "Updating pages" || echo "no changes to be made"
              git push
         
