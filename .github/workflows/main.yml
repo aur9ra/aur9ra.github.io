@@ -23,6 +23,7 @@ jobs:
 
       - name: MD to HTML
         run: |
+              echo "$PWD"
               mkdir -p docs
               python scripts/main.py
 
