@@ -1,8 +1,8 @@
 import os
 import markdown2
 
-INPUT = "..\content"
-OUTPUT = "..\docs"
+INPUT = "..\\content"
+OUTPUT = "..\\docs"
 
 def md_to_html(input_path, output_path):
     for path, folders, files in os.walk(INPUT):
@@ -15,7 +15,7 @@ def md_to_html(input_path, output_path):
                 os.makedirs(os.path.dirname(output_file), exist_ok=True)
                 
                 with open(input_file, "r", encoding="utf-8") as f:
-                    html_content = markdown2.markdown(f.read)
+                    html_content = markdown2.markdown(f.read())
                     
                 with open(output_file, "w", encoding="utf-8") as f:
                     f.write(html_content)
