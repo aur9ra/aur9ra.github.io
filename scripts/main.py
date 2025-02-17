@@ -19,6 +19,7 @@ def md_to_html(input_path, output_path):
                     
                 with open(output_file, "w", encoding="utf-8") as f:
                     f.write(html_content)
+                    print(f"Writing {output_file}")
                 
 if __name__ == "__main__":
     md_to_html(INPUT, OUTPUT)
