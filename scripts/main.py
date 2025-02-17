@@ -1,11 +1,11 @@
 import os
 import markdown2
 
-INPUT = "..\content"
-OUTPUT = "..\docs"
+BASE = os.path.dirname(os.path.realpath(__file__))
+INPUT = os.path.join(BASE, "content")
+OUTPUT = os.path.join(BASE, "docs")
 
 def md_to_html(input_path, output_path):
-    print(os.listdir(input_path))
     for path, folders, files in os.walk(INPUT):
         for file in files:
             if file.endswith(".md"):
