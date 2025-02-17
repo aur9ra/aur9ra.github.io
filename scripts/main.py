@@ -1,7 +1,7 @@
 import os
 import markdown2
 
-BASE = os.path.dirname(os.path.realpath(__file__))
+BASE = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 INPUT = os.path.join(BASE, "content")
 OUTPUT = os.path.join(BASE, "docs")
 
