@@ -1,0 +1,65 @@
+body {
+	background-image: linear-gradient(45deg, #efe5ff, #d1b5ff);
+	background-size: 70px 70px;
+	animation: bgcycle 2s infinite linear;
+	display: flex;
+	align-items: center;
+	justify-content: center;   
+	
+	font-family: "Lucida Console", Courier, monospace;
+}
+
+@keyframes bgcycle{
+	0% {
+		background-position: 0px 0px;
+	}
+	100% {
+		background-position: 70px 70px;
+	}
+}
+
+#main_content {
+	font-size: x-large;
+	background-color: rgba(20,30,30,0.95);
+	width: 50%;
+	min-width: 400px;
+	text-align: center;
+	border-radius: 25px 10px;
+	
+	color: rgba(253,226,255,0.9);
+}
+
+#gradient {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(45deg, rgba(186, 141, 255, 0.8), rgba(209, 181, 255, 0.5));
+	
+	z-index: -1
+}
+
+a {
+	color: rgba(217, 143, 224, 0.9);
+	transition: background-color 0.3s ease;
+}
+
+a:link {
+}
+
+a:visited {
+	color: rgba(192, 155, 255, 0.9)
+}
+
+a:focus {
+	background-color: rgba(225, 209, 255, 0.2)
+}
+
+a:hover {
+	background-color: rgba(225, 209, 255, 0.2)
+}
+
+a:active {
+	background-color: rgba(225, 209, 255, 0.2)
+}
