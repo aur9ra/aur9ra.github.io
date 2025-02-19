@@ -29,6 +29,12 @@ body {
 	color: rgba(253,226,255,0.9);
 }
 
+@media (max-width: 640px) {
+	#main_content {
+		width: 90%
+	}
+}
+
 #gradient {
 	position: fixed;
 	top: 0;
