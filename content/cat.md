@@ -1,1 +1,3 @@
-***:3*** but umm... check out my [dog!!](dog.html)
+12345
+
+[dog!!](dog.html)
