@@ -32,19 +32,28 @@ document.addEventListener("DOMContentLoaded", async () => {
 	}
 })
 
-document.addEventListener("click", event => {
+function handleLinkNavigation(href) {
+	const content = contentMap.get(href);
+	if (content) {
+		setCurrentPageData(content);
+		updateContentMap();
+		history.pushState({}, "", href);
+	}
+}
+
+function linkClickEventHandler(event) {
 	const link = event.target.closest("a");
 	if (!link) return;
 	
 	event.preventDefault();
-	const content = contentMap.get(link.href);
-	
-	if (content) {
-		setCurrentPageData(content);
-		updateContentMap();
-		history.pushState({}, "", link.href);
-	}
-});
+	handleLinkNavigation(link.href);
+}
+
+if (window.PointerEvent) {
+	document.addEventListener("pointerup", linkClickEventHandler);
+} else {
+	document.addEventListener("click", linkClickEventHandler);
+}
 
 window.addEventListener("popstate", () => {
 	const content = contentMap.get(window.location.href)
