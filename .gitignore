@@ -11,6 +11,12 @@
 # production
 /build
 
+# ignore docs locally
+docs/
+
+# but, let actions worker override the rule
+!docs/.gitkeep
+
 # misc
 .DS_Store
 .env.local
