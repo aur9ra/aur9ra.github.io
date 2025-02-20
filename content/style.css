@@ -1,0 +1,93 @@
+html {
+	touch-action: manipulation;
+}
+
+body {
+	background-image: linear-gradient(45deg, #efe5ff, #d1b5ff);
+	background-size: 70px 70px;
+	animation: bgcycle 2s infinite linear;
+	display: flex;
+	align-items: center;
+	justify-content: center;   
+	
+	font-family: "Lucida Console", Courier, monospace;
+}
+
+@keyframes bgcycle{
+	0% {
+		background-position: 0px 0px;
+	}
+	100% {
+		background-position: 70px 70px;
+	}
+}
+
+#main_content {
+	font-size: 2.5rem;
+	background-color: rgba(20,30,30,0.95);
+	text-align: center;
+	border-radius: 25px 10px;
+	margin: min(5%, 30px);
+	padding: 20px;
+	
+	width: 100%;
+	word-wrap: break-word;
+	
+	flex: 1;
+	
+	color: rgba(253,226,255,0.9);
+}
+
+#main_flex_container {
+	display: flex; 
+	flex-direction: row; 
+	justify-content: center; 
+	align-items: flex-start; 
+	
+	width: 92.5%;
+}
+
+@media (min-width: 1200px) {
+	#main_content {
+		font-size: 1.5rem;
+	}
+	
+	#main_flex_container {
+		min-width: 50%;
+	}
+}
+
+#gradient {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(45deg, rgba(186, 141, 255, 0.8), rgba(209, 181, 255, 0.5));
+	
+	z-index: -1
+}
+
+a {
+	color: rgba(217, 143, 224, 0.9);
+	transition: background-color 0.3s ease;
+}
+
+a:link {
+}
+
+a:visited {
+	color: rgba(192, 155, 255, 0.9)
+}
+
+a:focus {
+	background-color: rgba(225, 209, 255, 0.2)
+}
+
+a:hover {
+	background-color: rgba(225, 209, 255, 0.2)
+}
+
+a:active {
+	background-color: rgba(225, 209, 255, 0.2)
+}
