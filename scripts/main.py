@@ -30,6 +30,7 @@ def find_wrapper(file_name, path):
     custom_wrapper_path = os.path.join(wrapper_folder_path, custom_wrapper_name)
     
     if os.path.isfile(custom_wrapper_path):
+        print(f"Associating {file_name} with {custom_wrapper_name}")
         return custom_wrapper_path
         
     # search down to content, looking for ".wrapper\wrapper.default" along the way

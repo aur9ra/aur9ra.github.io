@@ -1,10 +1,8 @@
-# aur9
-Hi! I do programmery things.
+# Aurora Hart
+Hi!
 
-go to [this link](resume.html) lol
+I'm a software developer based out of San Francisco.
 
-and maybe even [this other link!](cat.html)
+This website is a work in progress. I've thrown up this page with a tool I'm working on that allows for non-technical users to deploy websites with minimal page load times by updating a directory of Markdown files.
 
-abwaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
-lorem ipsum something or other i don't actually know how it goes i just want a sentence
+I'm looking for junior level software development work based in San Francisco. You can find my resume [here](resume.html), and contact me at [aurora@aurorah.art](mailto:aurora@aurorah.art).
