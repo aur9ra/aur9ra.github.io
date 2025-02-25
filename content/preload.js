@@ -1,12 +1,12 @@
-async function getPageData(page) {
+async function getPageData(query, page) {
 	const response = await fetch(page);
 	const html = await response.text();
-	const main_content = new DOMParser().parseFromString(html, "text/html").querySelector("#main_content");
+	const main_content = new DOMParser().parseFromString(html, "text/html").querySelector(query);
 	
 	return main_content;
 }
 
-async function setCurrentPageData(innerHTML_content) {
+async function setCurrentPageData(query, innerHTML_content) {
 	document.querySelector("#main_content").innerHTML = innerHTML_content;
 }	
 
@@ -26,16 +26,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 	await updateContentMap()
 	
 	// cache current page, too
-	const currentPage = await getPageData(window.location.href);
+	const currentPageMainContent = await getPageData(window.location.href, "#main_content");
+	const currentPageHeadContent = await getPageData(window.location.href, "head");
 	if (currentPage) {
-		contentMap.set(window.location.href, currentPage.innerHTML)
+		contentMap.set(window.location.href, currentPageMainContent.innerHTML)
+		headMap.set(window.location.href, currentPageHeadContent.innerHTML)
 	}
 })
 
 function handleLinkNavigation(href) {
-	const content = contentMap.get(href);
+	const head_content = headMap.get(href);
+	const main_content = contentMap.get(href);
 	if (content) {
-		setCurrentPageData(content);
+		setCurrentPageData("#main_content", main_content);
 		updateContentMap();
 		history.pushState({}, "", href);
 	}
