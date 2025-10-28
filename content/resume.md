@@ -1,5 +1,9 @@
 # Resume
 
+Passionate software engineer with experience designing and scaling backend systems for longevity and stability. I enjoy diving deep
+into technically complex problems, fueled by curiosity (and coffee), and I thrive when collaborating with talented engineers to build
+brilliant products.
+
 If you'd like to download my resume as a pdf, please click [here.](Resume.pdf)
 
 ---
