@@ -10,7 +10,7 @@ body {
 	align-items: center;
 	justify-content: center;   
 	
-	font-family: "Lucida Console", Courier, monospace;
+	font-family: sans-serif;
 }
 
 @keyframes bgcycle{
