@@ -45,7 +45,9 @@ charge of empowering more than 100 students to develop advanced, concrete C# ski
 70+ applications and games, translating students’ dreams into tangible results.
 
 ## Projects
+
 ---
+
 ## Plainsight
 ### Project Lead (acquired privately by Cloud 9)
 #### December 2015 - January 2017
